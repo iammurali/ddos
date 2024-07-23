@@ -14,7 +14,7 @@ export default function TWO() {
           text="Remember, every failure is just a step towards your next epic disaster."
         /> */}
       <BlurIn
-      word="When life feels hard, Give up"
+      word="When life become hard, Give up"
       className="text-lg font-bold text-black dark:text-white"
     />
       {/* <BlurFade delay={0.25} inView>
