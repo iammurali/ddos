@@ -14,6 +14,7 @@ export default function Home() {
       </div>
       <div className="flex-1 px-12 md:px-32">
         <div className="flex flex-col items-center justify-center h-full">
+        <div className="pb-2 text-[#444D61]">{new Date().toDateString()}</div>
           <TypingAnimation
             duration={100}
             className="text-black dark:text-white"
