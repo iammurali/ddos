@@ -3,12 +3,16 @@
 import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
+import { Poppins } from "next/font/google";
+
 
 interface TypingAnimationProps {
   text: string;
   duration?: number;
   className?: string;
 }
+
+const font = Poppins({weight: ["400"], subsets: ["latin"] });
 
 export default function TypingAnimation({
   text,
@@ -36,7 +40,8 @@ export default function TypingAnimation({
   return (
     <h1
       className={cn(
-        "font-display text-center text-4xl font-bold leading-[5rem] tracking-[-0.02em] drop-shadow-sm",
+        font.className,
+        "font-display text-center text-4xl font-bold leading-[3.5rem] tracking-[-0.02em] drop-shadow-sm",
         className,
       )}
     >
