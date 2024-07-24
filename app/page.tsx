@@ -7,7 +7,7 @@ export default function Home() {
     <div className="h-full flex flex-col">
       <div className="flex-1 hidden md:block">
         <div className="flex flex-row justify-end p-14">
-          <div className="flex flex-row justify-between items-center gap-2 bg-[#6a6a6c] rounded-lg py-2 px-4">
+          <div className="flex flex-row justify-between items-center gap-2 bg-[#172138] rounded-lg py-2 px-4">
             <WhatsappIcon /> Get daily dose in whatsapp <ArrowRightIcon />
           </div>
         </div>

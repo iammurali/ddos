@@ -27,7 +27,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className="flex flex-col md:flex-row h-full">
-            <aside className="flex flex-col md:flex-col md:border-r py-10 px-8 md:py-20 md:px-16 md:min-w-[378px]">
+            <aside className="flex flex-col md:flex-col md:border-r py-10 px-8 md:py-20 md:px-16 md:min-w-[378px] justify-between">
               <div
                 className={cn(titleFont.className, "text-[22px] md:text-[42px] text-[#FF7171] flex flex-col gap-4 font-normal pb-12 md:pb-24 items-center md:items-start hidden md:block")}
               >
