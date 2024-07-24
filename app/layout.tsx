@@ -26,7 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="flex flex-col md:flex-row">
+          <main className="flex flex-col md:flex-row h-full">
             <aside className="flex flex-col md:flex-col md:border-r py-10 px-8 md:py-20 md:px-16 md:min-w-[378px]">
               <div
                 className={cn(titleFont.className, "text-[22px] md:text-[42px] text-[#FF7171] flex flex-col gap-4 font-normal pb-12 md:pb-24 items-center md:items-start hidden md:block")}
@@ -37,7 +37,7 @@ export default function RootLayout({
                 <span className="block">Sarcasm</span>
               </div>
               <div
-                className={cn(titleFont.className, "text-[22px] md:text-[42px] text-[#FF7171] flex flex-col gap-4 font-normal py-12 md:pb-24 items-center md:items-start md:hidden")}
+                className={cn(titleFont.className, "text-[22px] md:text-[42px] text-[#FF7171] flex flex-col gap-4 font-normal pb-12 md:pb-24 items-center md:items-start md:hidden")}
               >
                 <span className="block">Daily Dose of Sarcasm</span>
               </div>
@@ -51,7 +51,7 @@ export default function RootLayout({
                 <p>Case solved 1 / --</p>
               </div>
             </aside>
-            <div className="w-full">
+            <div className="w-full h-full">
               {children}
             </div>
           </main>
