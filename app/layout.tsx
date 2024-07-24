@@ -29,12 +29,17 @@ export default function RootLayout({
           <main className="flex flex-col md:flex-row">
             <aside className="flex flex-col md:flex-col md:border-r py-10 px-8 md:py-20 md:px-16 md:min-w-[378px]">
               <div
-                className={cn(titleFont.className, "text-[22px] md:text-[42px] text-[#FF7171] flex flex-col gap-4 font-normal pb-12 md:pb-24")}
+                className={cn(titleFont.className, "text-[22px] md:text-[42px] text-[#FF7171] flex flex-col gap-4 font-normal pb-12 md:pb-24 items-center md:items-start hidden md:block")}
               >
                 <span className="block">Daily</span>
                 <span className="block">Dose</span>
                 <span className="block">Of</span>
                 <span className="block">Sarcasm</span>
+              </div>
+              <div
+                className={cn(titleFont.className, "text-[22px] md:text-[42px] text-[#FF7171] flex flex-col gap-4 font-normal py-12 md:pb-24 items-center md:items-start md:hidden")}
+              >
+                <span className="block">Daily Dose of Sarcasm</span>
               </div>
               <div className="mt-4 md:mt-8 text-[#444D61] hidden md:block text-sm">
                 <p className="pb-3">Next Dose in 16H</p>
