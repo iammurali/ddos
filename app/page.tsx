@@ -19,7 +19,7 @@ export default function Home() {
             text={`"Remember, every failure is just a step towards your next epic disaster."`}
           />
         </div>
-        <div className="pt-20 flex flex-col justify-center items-center">
+        <div className="absolute top-72 flex flex-col justify-center items-center">
           <div className="text-center text-xs font-extralight">
             <HeartFilledIcon className="h-8 w-8" />
           </div>
