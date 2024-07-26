@@ -3,6 +3,8 @@ import { Poppins, Knewave, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/sonner"
+ 
 
 const font = Inter({ subsets: ["latin"] });
 const titleFont = Knewave({ weight: "400", subsets: ["latin"] });
@@ -17,6 +19,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  function hoursUntilNextDay() {
+    const now: any = new Date();
+    const nextDay: any = new Date(now);
+    nextDay.setDate(now.getDate() + 1);
+    nextDay.setHours(0, 0, 0, 0); // Set to midnight of the next day
+
+    const diffInMilliseconds = nextDay - now;
+    const diffInHours = Math.floor(diffInMilliseconds / (1000 * 60 * 60));
+
+    return diffInHours;
+  }
+
+  const hours = hoursUntilNextDay();
+
   return (
     <html lang="en">
       <body className={font.className}>
@@ -42,7 +59,7 @@ export default function RootLayout({
                 <span className="block">Daily Dose of Sarcasm</span>
               </div>
               <div className="mt-4 md:mt-8 text-[#444D61] hidden md:block text-sm">
-                <p className="pb-3">Next Dose in 16H</p>
+                <p className="pb-3">Next Dose in ~{hours}H</p>
                 <p className="text-white pb-7 leading-7">
                   Built with way too less caffeine by <br />
                   <a className="hover:underline" href="https://www.linkedin.com/in/anuroop-reddy-440146139/" target="_blank">Anuroop</a> &{" "}
@@ -55,6 +72,7 @@ export default function RootLayout({
               {children}
             </div>
           </main>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
