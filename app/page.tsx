@@ -5,8 +5,13 @@ import { redirect } from "next/navigation";
 import HeartIconAnimated from "@/components/heart";
 import { WhatsappContactDialog } from "@/components/contact-dialog";
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home() {
-  const result = await getQuotes();
+
+  const today = new Date().toISOString().split("T")[0]; 
+
+  const result = await getQuotes(today);
   console.log(result);
 
   // async function addQuote() {

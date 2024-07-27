@@ -9,14 +9,12 @@ export const db = drizzle(sql, { schema });
 export const getUsers = async () => {
   return db.query.UsersTable.findMany();
 };
-
-schema.QuotesTable.showOn, new Date().toISOString();
-export const getQuotes = async () => {
+export const getQuotes = async (today: string) => {
   // return db.query.QuotesTable.findFirst({
   //     where: (users, { eq }) => eq(schema.QuotesTable.showOn, new Date().toISOString()),
   //   });
 
-  const today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
+  // Get today's date in YYYY-MM-DD format
 
   // Query for today's quote
   const todayQuote = await db.query.QuotesTable.findFirst({
