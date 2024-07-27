@@ -10,12 +10,6 @@ export const getUsers = async () => {
   return db.query.UsersTable.findMany();
 };
 export const getQuotes = async (today: string) => {
-  // return db.query.QuotesTable.findFirst({
-  //     where: (users, { eq }) => eq(schema.QuotesTable.showOn, new Date().toISOString()),
-  //   });
-
-  // Get today's date in YYYY-MM-DD format
-
   // Query for today's quote
   const todayQuote = await db.query.QuotesTable.findFirst({
     where: (quotes, { eq }) => eq(quotes.showOn, today),
