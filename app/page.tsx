@@ -6,6 +6,7 @@ import HeartIconAnimated from "@/components/heart";
 import { WhatsappContactDialog } from "@/components/contact-dialog";
 
 export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
 
 export default async function Home() {
 
