@@ -52,11 +52,11 @@ export default async function Home() {
       </div>
       <div className="flex-1 px-12">
         <div className="flex flex-col justify-center items-center h-full">
-          <div className="text-center text-xs font-extralight text-white flex flex-col items-center gap-1">
-            <div className="h-10 w-10">
+          <div className="relative text-center text-xs font-extralight text-white flex flex-col items-center gap-1">
+            <div className="">
               <HeartIconAnimated addLike={addLike} />
             </div>
-            <div className="float-right">{result?.likes}</div>
+            <div className="absolute top-9 right-3 text-xl font-semibold">{result?.likes}</div>
           </div>
           <div className="py-5 text-center text-xs font-extralight">{`Tap 'like' if you're feeling generous. It won't change the universe, but you'll get a heart to show you're pretending it might.`}</div>
           <div className="md:hidden pt-5">
